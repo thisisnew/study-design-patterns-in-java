@@ -29,7 +29,8 @@ public class PrinterProxy implements Printable {
 
     @Override
     public void print(String string) {
-
+        realize();
+        real.print(string);
     }
 
     private synchronized void realize() {
