@@ -1,6 +1,7 @@
 package observer;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public abstract class NumberGenerator {
 
@@ -13,5 +14,18 @@ public abstract class NumberGenerator {
     public void deleteObserver(Observer observer) {
         observers.remove(observer);
     }
+
+    public void notifyObservers() {
+        Iterator it = observers.iterator();
+
+        while (it.hasNext()) {
+            Observer o = (Observer) it.next();
+            o.update(this);
+        }
+    }
+
+    public abstract int getNumbers();
+
+    public abstract void execute();
 
 }
