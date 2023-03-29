@@ -3,34 +3,34 @@ package command;
 import javax.swing.*;
 import java.awt.event.*;
 
-public class Main extends JFrame implements ActionListener, MouseListener, WindowListener {
+public class Main extends JFrame implements ActionListener, MouseMotionListener, WindowListener {
+
+    private MacroCommand history = new MacroCommand();
+    private DrawCanvas canvas = new DrawCanvas(400, 400, history);
+    private JButton clearButton = new JButton("clear");
+
+    public Main(String title) {
+        super(title);
+
+        this.addWindowListener(this);
+        canvas.addMouseMotionListener(this);
+        clearButton.addActionListener(this);
+
+        Box buttonBox = new Box(BoxLayout.X_AXIS);
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
 
     }
 
     @Override
-    public void mouseClicked(MouseEvent e) {
-        
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
+    public void mouseDragged(MouseEvent e) {
 
     }
 
     @Override
-    public void mouseReleased(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
+    public void mouseMoved(MouseEvent e) {
 
     }
 
