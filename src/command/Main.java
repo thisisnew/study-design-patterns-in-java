@@ -19,6 +19,10 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
         Box buttonBox = new Box(BoxLayout.X_AXIS);
     }
 
+    public static void main(String[] args) {
+        new Main("Command Pattern Sample");
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == clearButton) {
@@ -46,7 +50,7 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
 
     @Override
     public void windowClosing(WindowEvent e) {
-
+        System.exit(0);
     }
 
     @Override
