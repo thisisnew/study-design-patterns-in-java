@@ -29,7 +29,9 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
 
     @Override
     public void mouseDragged(MouseEvent e) {
-
+        Command cmd = new DrawCommand(canvas, e.getPoint());
+        history.append(cmd);
+        cmd.execute();
     }
 
     @Override
