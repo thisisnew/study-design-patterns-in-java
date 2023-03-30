@@ -21,7 +21,10 @@ public class Main extends JFrame implements ActionListener, MouseMotionListener,
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if (e.getSource() == clearButton) {
+            history.clear();
+            canvas.repaint();
+        }
     }
 
     @Override
