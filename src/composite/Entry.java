@@ -1,13 +1,11 @@
 package composite;
 
-import java.util.Map;
-
-public abstract class Entity {
+public abstract class Entry {
     public abstract String getName();
 
     public abstract int getSize();
 
-    public Map.Entry add(Map.Entry entry) throws FileTreatmentException {
+    public Entry add(Entry entry) throws FileTreatmentException {
         throw new FileTreatmentException();
     }
 
