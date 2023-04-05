@@ -8,7 +8,7 @@ public class Directory extends Entry {
     private String name;
     private ArrayList directory = new ArrayList();
 
-    private Directory(String name) {
+    public Directory(String name) {
         this.name = name;
     }
 
